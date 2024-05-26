@@ -53,7 +53,11 @@ for(const roll of rollArray){
 
 
 
+let paper = ["DSA", "OS", "DBMS", "Computer Networks"];
 
+for (let r of paper){
+    console.log(r);
+}
 
 
 
@@ -66,6 +70,10 @@ while (j <= 10) {
     console.log("while : " + j);
     j++;
 };
+
+
+
+
 
 
 // Do While Loop
