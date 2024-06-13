@@ -36,3 +36,22 @@ console.log(info3);
 
 
 
+// `` (Introduced with ES6)
+
+let userInfo = `I am ${userFullName}, I am from ${userCountry}.`;
+console.log(userInfo);
+
+
+let totalScore = `Total Score of Two Paper is ${50 + 40}`;
+console.log(totalScore);
+
+
+let fullstackTechnology = `
+                  Frontend
+                  Backend
+                  Devops
+                  Cloud
+                  `;
+console.log(fullstackTechnology);
+
+
