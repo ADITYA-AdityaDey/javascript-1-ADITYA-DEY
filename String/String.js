@@ -55,3 +55,67 @@ let fullstackTechnology = `
 console.log(fullstackTechnology);
 
 
+
+
+
+
+const user2Name = new String("Second User");
+console.log(user2Name);
+console.log(typeof(user2Name)); // I make it object
+console.log(user2Name[2]);
+// user2Name[2] = "r"; // value not changeble using index(key value pair) here
+
+
+
+
+
+
+const user3Name = "Third User";
+console.log(user3Name);
+
+console.log(user2Name == user3Name);
+
+
+
+
+
+
+////////////////////////////// String Methods //////////////////////////
+const appUser = `APP USER1`;
+
+
+console.log(appUser.length);
+
+console.log(appUser.charAt(2));
+
+console.log(appUser.indexOf(`R`));
+
+console.log(appUser.toLowerCase());
+
+console.log(appUser.slice(4)); // slice() upport - value but substring doesn't
+
+console.log(appUser.substring(4));
+
+console.log(appUser.slice(0, 3)); // end point = end point - 1
+
+console.log(appUser.substring(0, 10));
+
+console.log(appUser.slice(6, 1)); // output is blank
+
+console.log(appUser.substring(6, 1)); // In substring JavaScript Engine (6, 1) is Automatically swap to (1, 6)
+
+
+
+const someText = `   WEB APPLICATION   `;
+console.log(someText.trim());
+console.log(someText.trimStart());
+console.log(someText.trimEnd());
+
+
+
+const url = `https://appuser.com/profile%20details`;
+console.log(url.replace(`%20`, `-`));
+
+
+
+console.log(appUser.split(` `));
