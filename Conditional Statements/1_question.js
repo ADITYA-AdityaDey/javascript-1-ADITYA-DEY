@@ -1,23 +1,10 @@
-/*
-if(){
+// positive or negative
 
-}else if(){
 
-}else{
+const value = 100;
 
+if (value > 0){
+    console.log(`value is positive`);
+} else {
+    console.log(`value is negative`);
 }
-
-*/
-
-/*
-switch(){
-    case "":
-        conole.log()
-        break
-    case "":
-        console.log()
-        break
-    default:
-        console,log()
-}
-*/
