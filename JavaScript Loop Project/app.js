@@ -11,8 +11,22 @@ function guessTheNumber(userInputDifficulty) {
             randomNumber = Math.floor(Math.random() *10) + 1; // range 1-10
             // console.log(randomNumber);
             break;
-    }
-}
+        
+        case `medium`:
+            maximumAttemts = 7;
+            randomNumber = Math.floor(Math.random() *100) + 1; // range 1-100
+            // console.log(randomNumber);
+            break;
+        
+        case `hard`:
+            maximumAttemts = 10;
+            randomNumber = Math.floor(Math.random() *1000) + 1; // range 1-1000
+            // console.log(randomNumber);
+            break;
+        default:
+            console.error(`Invalid Difficulty Level choose "easy", "medium", "hard"`);
+    };
+};
 
 
 
