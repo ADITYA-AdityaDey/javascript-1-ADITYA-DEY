@@ -1,34 +1,22 @@
-class Person {
-    #user1FirstName; // Private Access Modifier
-    _user1LastName; // Protected Access Modifier
-    user1Code; // Public Access Modifier
-    #user1Email; // Private Access Modifier
-    User1Country; // Public Access Modifier 
-
-    constructor(u1fn, u1ln, u1c, u1e, u1coun) {
-        this.#user1FirstName = u1fn;
-        this._user1LastName = u1ln;
-        this.user1Code = u1c;
-        this.#user1Email = u1e;
-        this.User1Country = u1coun;
+class Person{
+    #firstName;
+    lastName;
+    age;
+    constructor(fn, ln, ag){
+        this.#firstName = fn;
+        this.lastName = ln;
+        this.age = ag;
     }
 
-    user1FullName() {
-        return this.#user1FirstName + ` ` + this._user1LastName;
+    fullName(){
+        console.log(this.#firstName, this.lastName);
     }
 
-    userEmaiID(){
-        console.log(this.#user1Email);
+    ageFun(){
+        console.log(this.age);
     }
-
 }
 
-let obj = new Person(`First`, `User`, 1, `abcxyz@email.com`, `India`);
-
-// console.log(obj.#user1FirstName); Private Property not Acceptsble outside the the class Person
-
-console.log(obj._user1LastName);
-
-console.log(obj.User1Country);
-
-obj.userEmaiID();
+let obj = new Person(`User`, `One`, 20);
+obj.fullName();
+obj.ageFun();
