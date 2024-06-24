@@ -1,11 +1,11 @@
 class Person{
     #firstName;
     lastName;
-    age;
+    _age;
     constructor(fn, ln, ag){
         this.#firstName = fn;
         this.lastName = ln;
-        this.age = ag;
+        this._age = ag;
     }
 
     fullName(){
@@ -13,10 +13,33 @@ class Person{
     }
 
     ageFun(){
-        console.log(this.age);
+        console.log(this._age);
     }
 }
 
-let obj = new Person(`User`, `One`, 20);
-obj.fullName();
-obj.ageFun();
+class Teacher extends Person{
+    subject;
+    constructor(fn, ln, ag, sub) {
+        super(fn, ln, ag);
+        this.subject = sub;
+    }
+    display(){
+        return this.lastName + ` ` + this.subject + ` ` + this._age;
+    }
+}
+
+
+
+
+
+let objPersonClass = new Person(`User`, `One`, 20);
+objPersonClass.fullName();
+objPersonClass.ageFun();
+
+
+let objTeacherClass = new Teacher(`Teacher`, `One`, 30, `JavaScript`);
+objTeacherClass.fullName();
+console.log(objTeacherClass.display());
+
+
+
