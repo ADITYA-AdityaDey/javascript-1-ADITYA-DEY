@@ -6,25 +6,25 @@ function guessTheNumber(userInputDifficulty) {
     let rangeLimit;
 
     // Set The Difficulty Parameters
-    switch (userInputDifficulty){
+    switch (userInputDifficulty) {
         case `easy`:
             rangeLimit = 10;
             maximumAttemts = 5;
-            randomNumber = Math.floor(Math.random() *10) + 1; // range 1-10
+            randomNumber = Math.floor(Math.random() * 10) + 1; // range 1-10
             console.log(randomNumber);
             break;
-        
+
         case `medium`:
             rangeLimit = 100;
             maximumAttemts = 7;
-            randomNumber = Math.floor(Math.random() *100) + 1; // range 1-100
+            randomNumber = Math.floor(Math.random() * 100) + 1; // range 1-100
             console.log(randomNumber);
             break;
-        
+
         case `hard`:
             rangeLimit = 1000;
             maximumAttemts = 10;
-            randomNumber = Math.floor(Math.random() *1000) + 1; // range 1-1000
+            randomNumber = Math.floor(Math.random() * 1000) + 1; // range 1-1000
             console.log(randomNumber);
             break;
         default:
@@ -33,31 +33,25 @@ function guessTheNumber(userInputDifficulty) {
 
 
     // Input your Number
-    while (attempts < maximumAttemts){
+    while (attempts < maximumAttemts) {
         let userInputGuessValue = parseInt(prompt(`Guess a Number between 1 to ${rangeLimit}. You have ${maximumAttemts - attempts} Attempts.`));
         attempts++;
 
-        if (userInputGuessValue === randomNumber){
+        if (userInputGuessValue === randomNumber) {
             console.log(`Congratulations You Guessed the Number in`, attempts, `Attempts.`);
+            break;
+        } else if (userInputGuessValue < randomNumber) {
+            console.log(`Too Low, Try Again`);
+        } else {
+            console.log(`Too High, Try Again`);
         }
 
-
-        console.log(userInputGuessValue);
+        // console.log(userInputGuessValue);
+    }
+    if (maximumAttemts === attempts){
+        console.log(`Sorry you ran out of attempts. The Number was`, randomNumber);
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
