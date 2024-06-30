@@ -40,3 +40,31 @@ let objTeacherClass = new Teacher(`Teacher`, `One`, 30, `JavaScript`);
 console.log(objTeacherClass.fullName());
 console.log(objTeacherClass.display());
 console.log(objTeacherClass.fullName());
+
+
+
+
+
+class First {
+    constructor() {}
+
+    mathematics() {
+        console.log(10 + 10);
+    }
+}
+
+class Second extends First{
+    constructor() {
+        super();
+    }
+
+    mathematics() {
+        console.log(50 - 20);
+    }
+}
+
+let obj = [new First(), new Second()];
+
+obj.forEach((f) => {
+    f.mathematics();
+});
