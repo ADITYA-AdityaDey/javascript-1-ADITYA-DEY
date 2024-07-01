@@ -46,14 +46,14 @@ console.log(objTeacherClass.fullName());
 
 
 class First {
-    constructor() {}
+    constructor() { }
 
     mathematics() {
         console.log(10 + 10);
     }
 }
 
-class Second extends First{
+class Second extends First {
     constructor() {
         super();
     }
@@ -68,3 +68,45 @@ let obj = [new First(), new Second()];
 obj.forEach((f) => {
     f.mathematics();
 });
+
+
+
+
+
+
+class User {
+    constructor() {
+        if (this.constructor == User) {
+            throw new Error(`Object of Abstract class can't be created`);
+        }
+    }
+    fun() {
+        throw new Error(`Abstract Method has no Implementation`);
+    }
+}
+
+class AppUser extends User {
+    constructor() {
+        super();
+    }
+    fun() {
+        console.log(80 + 20);
+    }
+}
+
+
+class Student extends User {
+    constructor() {
+        super();
+    }
+
+    fun() {
+        console.log(70 + 20);
+    }
+}
+
+let appuserObj = new AppUser();
+appuserObj.fun();
+
+let studentObj = new Student();
+studentObj.fun();
